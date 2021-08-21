@@ -33,9 +33,14 @@
                     <input type="email" placeholder="Enter your emailID" required>                  
                 </div>
             </div>
-            <a href="prompt.html"><div class="button"></a>
-                <input type="submit" value="TRANSFER">
-                
+            <div class="button">
+                <input type="submit" id="button" value="TRANSFER">
+                <script>
+                    var button=document.getElementById("button");
+                    button.addEventListener("click",()=>{
+                        alert("Transaction Successful");
+                    })                    
+                </script>
             </div>
         </form>
     </div>

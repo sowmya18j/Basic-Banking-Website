@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustomerTable</title>
+</head>
+<body>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:#fff;
+            }
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>S_No</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Account_Number</th>
+        <th>Bank_Balance</th>
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+	var myArray =[{
+    "S_No": 1,
+    "Name": "Sowmya",
+    "Email": "sowmyakj2000@gmail.com",
+    "Acount_Number":12346789123,
+    "Bank_Balance": 1000
+  }, {
+    "S_No": 2,
+    "Name": "Sj",
+    "Email": "sowmyakj2000@gmail.com",
+    "Acount_Number":12346789120,
+    "Bank_Balance": 1010
+  }, {
+    "S_No": 3,
+    "Name": "Sibel",
+    "Email": "sfillery2@techcrunch.com",
+    "Acount_Number":12346789150,
+    "Bank_Balance": 1020
+  }, {
+    "S_No": 4,
+    "Name": "Hina",
+    "Email": "hhelmke3@com.com",
+    "Acount_Number":12346755123,
+    "Bank_Balance": 1030
+  }, {
+    "S_No": 5,
+    "Name": "Iago",
+    "Email": "imaddyson4@buzzfeed.com",
+    "Acount_Number":12776789123,
+    "Bank_Balance": 1040
+  }, {
+    "S_No": 6,
+    "Name": "Lyon",
+    "Email": "lstockman5@live.com",
+    "Acount_Number":12346789703,
+    "Bank_Balance": 1050
+  }, {
+    "S_No": 7,
+    "Name": "Missie",
+    "Email": "mbowring6@latimes.com",
+    "Acount_Number":123467597203,
+    "Bank_Balance": 1060
+  }, {
+    "S_No": 8,
+    "Name": "Rosanne",
+    "Email": "rteacy7@cam.ac.uk",
+    "Acount_Number":21346789123,
+    "Bank_Balance": 1070
+  }, {
+    "S_No": 9,
+    "Name": "Florie",
+    "Email": "fpaybody8@apache.org",
+    "Acount_Number":12346789165,
+    "Bank_Balance": 1080
+  }, {
+    "S_No": 10,
+    "Name": "Ross",
+    "Email": "rmaith9@abc.net.au",
+    "Acount_Number":32046789123,
+    "Bank_Balance": 1090
+  }]
+  buildTable(myArray)
+
+  function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].S_No}</td>
+							<td>${data[i].Name}</td>
+							<td>${data[i].Email}</td>
+              <td>${data[i].Acount_Number}</td>
+              <td>${data[i].Bank_Balance}</td>
+
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>
+</body>
+</html>
